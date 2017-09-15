@@ -1,6 +1,6 @@
 {
    "name": "rehype-img-as",
-   "version": "0.0.3",
+   "version": "0.0.4",
    "main": "./lib/index.js",
    "description": "use alt attribute as alternative store.",
    "license": "MIT",
@@ -39,7 +39,6 @@
       "build": "cross-env NODE_ENV=build babel ./src -d ./lib",
       "postbuild": "flow-copy-source ./src ./lib",
       "format": "prettier --write **/*.js package.json",
-      "precommit": "yarn format",
       "typed": "flow-typed",
       "node": "node --require babel-register"
    },
