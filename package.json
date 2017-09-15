@@ -1,8 +1,18 @@
 {
    "name": "rehype-img-as",
-   "version": "0.0.0",
+   "version": "0.0.1",
    "main": "./lib/index.js",
    "license": "MIT",
+   "repository": "kthjm/rehype-img-as",
+   "author": {
+      "name": "kthjm",
+      "email": "toxictoxer@gmail.com",
+      "url": "kthjm.github.io"
+   },
+   "keywords": [
+      "rehype",
+      "plugin"
+   ],
    "prettier": {
       "tabWidth": 3,
       "semi": false,
