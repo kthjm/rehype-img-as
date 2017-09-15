@@ -1,6 +1,6 @@
 {
    "name": "rehype-img-as",
-   "version": "0.0.1",
+   "version": "0.0.2",
    "main": "./lib/index.js",
    "description": "use alt attribute as alternative store.",
    "license": "MIT",
