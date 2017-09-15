@@ -9,3 +9,5 @@ deploy:
   on:
     tags: true
     repo: kthjm/rehype-img-as
+  api_key:
+    secure: ufzZdXzaGU73A9F+JIcdEuoDQAfkiQKfva00K6YoZig0imP7o0gAPLnlRXua2fSxV2LqCJEfP1idenZ+g/g+sFwyQO80VpUkqf/e/J1TL61XMHdPXoqjyOSNKeczf7XBw2uCdg4SDzaokAb/cLEZrIuV6LOGrLCiw5ynu+bDfsR5jbyOt25dRpxBpXsgz+ZmzY5sbfC/52p4t/RGYYmUW6QM9RDkZFjwssgwmwukMi9Jd9349fVDTR3OQuKWUGsbJza8smzsg4CKm7QzRrKIuz0r6AqS6vnfCqSoUzM3sAL9wDjQ2HpgyCUiAIo1x37OB//pElu/Kbyag6VXByCyCIlUBiXwS1WMEqYFP7uQci+f2FlhoMY7TTtAVdnGt2GfHfMeyGFEIlylmT8a6eISuPLDp/0EM+Zub9g9andeSBSW+PNXZ/BzIUogkGyM+oLnwR/dCssheAA+72A3eDt3V2S7YpK1wAZ1PcjC2fNpV8pp3o2bnU9x/Hc7qzCVWnviN+IeOeNo5IbzDxgtPawooGEQdg4oSQLiIjGJxF+Wvv1ArMV56KQY+kL+C26Gy99+OtUMQWsvX9Yeew7OOaZr4StPl6t5c/ysGnef/kiXTk2e0MV4IVKgZWwRgicu5zmfHXSHoEH1RYDDPefycxxxZCeBadSKFUQHjXaridzGM5M=
