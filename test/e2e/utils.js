@@ -2,7 +2,7 @@ import rehype from 'rehype'
 import unified from 'unified'
 import mdParse from 'remark-parse'
 import mdast2hast from 'remark-rehype'
-import imgas from '../../src/index'
+import imgas from '../../lib/index.js'
 import minify from 'rehype-minify-whitespace'
 import rehypeStringify from 'rehype-stringify'
 

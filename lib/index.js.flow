@@ -1,5 +1,4 @@
 // @flow
-import regeneratorRuntime from 'regenerator-runtime'
 import { selectAll } from 'hast-util-select'
 import path from 'path'
 import re from './re.js'

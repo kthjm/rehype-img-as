@@ -1,4 +1,5 @@
 // @flow
+import regeneratorRuntime from 'regenerator-runtime'
 import rehype from 'rehype'
 import type { Rehype$Root } from './types.js'
 

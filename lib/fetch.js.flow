@@ -1,4 +1,5 @@
 // @flow
+import regeneratorRuntime from "regenerator-runtime";
 import rehype from 'rehype'
 import type { Rehype$Root } from './types.js'
 
@@ -11,7 +12,6 @@ const fetchSkeleton = (file): Promise<Response> =>
    })
 
 type FetchToWhat<O> = (file: string) => Promise<O>
-
 
 export const fetchToHast: FetchToWhat<Rehype$Root | void> = async file => {
    try {
