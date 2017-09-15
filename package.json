@@ -6,10 +6,7 @@
    "license": "MIT",
    "repository": "kthjm/rehype-img-as",
    "author": "kthjm <toxictoxer@gmail.com>",
-   "keywords": [
-      "rehype",
-      "plugin"
-   ],
+   "keywords": ["rehype", "plugin"],
    "prettier": {
       "tabWidth": 3,
       "semi": false,
@@ -30,6 +27,7 @@
    },
    "nyc": {
       "require": ["babel-register"],
+      "include": ["src"],
       "sourceMap": false,
       "instrument": false
    },

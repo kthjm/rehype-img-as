@@ -1,5 +1,5 @@
 // @flow
-// import path from 'path'
+import regeneratorRuntime from 'regenerator-runtime'
 import { resolve } from 'url'
 import { fetchToHast, fetchToBlobUrl } from './fetch.js'
 import type { Rehype$Root } from './types.js'
