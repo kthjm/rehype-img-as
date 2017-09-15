@@ -2,6 +2,7 @@
    "name": "rehype-img-as",
    "version": "0.0.1",
    "main": "./lib/index.js",
+   "description": "use alt attribute as alternative store.",
    "license": "MIT",
    "repository": "kthjm/rehype-img-as",
    "author": {
