@@ -1,15 +1,11 @@
 {
    "name": "rehype-img-as",
-   "version": "0.0.2",
+   "version": "0.0.3",
    "main": "./lib/index.js",
    "description": "use alt attribute as alternative store.",
    "license": "MIT",
    "repository": "kthjm/rehype-img-as",
-   "author": {
-      "name": "kthjm",
-      "email": "toxictoxer@gmail.com",
-      "url": "kthjm.github.io"
-   },
+   "author": "kthjm <toxictoxer@gmail.com>",
    "keywords": [
       "rehype",
       "plugin"
@@ -18,10 +14,6 @@
       "tabWidth": 3,
       "semi": false,
       "singleQuote": true
-   },
-   "//lint-staged": {
-      "verbose": true,
-      "*.js": ["prettier --write", "git add"]
    },
    "babel": {
       "presets": ["es2015", "flow"],
@@ -50,7 +42,6 @@
       "postbuild": "flow-copy-source ./src ./lib",
       "format": "prettier --write **/*.js package.json",
       "precommit": "yarn format",
-      "//precommit": "lint-staged",
       "typed": "flow-typed",
       "node": "node --require babel-register"
    },
@@ -71,7 +62,6 @@
       "flow-copy-source": "^1.2.1",
       "flow-typed": "^2.1.5",
       "husky": "^0.14.3",
-      "lint-staged": "^4.0.4",
       "mocha": "^3.5.0",
       "npm-run-all": "^4.1.1",
       "nyc": "^11.1.0",
@@ -81,7 +71,6 @@
       "remark": "^8.0.0",
       "remark-rehype": "^2.0.1",
       "rewire": "^2.5.2",
-      "sinon": "^3.2.1",
       "unified": "^6.1.5"
    },
    "dependencies": {
