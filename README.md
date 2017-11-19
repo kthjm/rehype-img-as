@@ -1,7 +1,7 @@
 # rehype-img-as
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![Build Status](https://travis-ci.org/kthjm/rehype-img-as.svg)](https://travis-ci.org/kthjm/rehype-img-as)
-[![Coverage Status](https://coveralls.io/repos/github/kthjm/rehype-img-as/badge.svg)](https://coveralls.io/github/kthjm/rehype-img-as)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Build Status](https://img.shields.io/travis/kthjm/rehype-img-as.svg?style=flat-square)](https://travis-ci.org/kthjm/rehype-img-as)
+[![Coverage Status](https://img.shields.io/codecov/c/github/kthjm/rehype-img-as.svg?style=flat-square)](https://codecov.io/github/kthjm/rehype-img-as)
 
 use `alt` attribute as alternative store.
 
