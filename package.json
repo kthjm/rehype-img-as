@@ -1,7 +1,7 @@
 {
    "name": "rehype-img-as",
-   "version": "0.0.5",
-   "main": "./lib/index.js",
+   "version": "0.0.6",
+   "main": "lib",
    "description": "use alt attribute as alternative store.",
    "license": "MIT",
    "repository": "kthjm/rehype-img-as",
@@ -13,14 +13,36 @@
       "singleQuote": true
    },
    "babel": {
-      "presets": ["es2015", "flow"],
-      "plugins": ["add-module-exports", "array-includes"],
       "env": {
          "build": {
-            "plugins": ["transform-regenerator"]
+            "presets": [
+               [
+                  "env",
+                  {
+                     "targets": {
+                        "browsers": ["last 2 versions", "safari >= 7"]
+                     },
+                     "debug": true
+                  }
+               ],
+               "flow"
+            ],
+            "plugins": ["array-includes"]
          },
          "test": {
-            "presets": ["power-assert"],
+            "presets": [
+               [
+                  "env",
+                  {
+                     "targets": {
+                        "node": "current"
+                     },
+                     "debug": true
+                  }
+               ],
+               "flow",
+               "power-assert"
+            ],
             "plugins": ["istanbul", "rewire"]
          }
       }
@@ -32,43 +54,43 @@
       "instrument": false
    },
    "scripts": {
-      "flow": "flow",
-      "nycha": "cross-env NODE_ENV=test nyc mocha --recursive",
-      "test": "run-s flow nycha",
-      "coverage": "nyc report --reporter=text-lcov | coveralls",
+      "pretest": "flow",
+      "test": "cross-env NODE_ENV=test nyc mocha --recursive",
+      "prebuild": "yarn test",
       "build": "cross-env NODE_ENV=build babel ./src -d ./lib",
-      "postbuild": "flow-copy-source ./src ./lib",
+      "postbuild": "run-s format copy",
       "format": "prettier --write **/*.js package.json",
+      "copy": "flow-copy-source ./src ./lib",
       "typed": "flow-typed",
-      "node": "node --require babel-register"
+      "report": "nyc report --reporter=lcov",
+      "codecov": "codecov",
+      "coverage": "run-s report codecov"
    },
    "devDependencies": {
       "babel-cli": "^6.26.0",
-      "babel-plugin-add-module-exports": "^0.2.1",
       "babel-plugin-array-includes": "^2.0.3",
-      "babel-plugin-istanbul": "^4.1.4",
+      "babel-plugin-istanbul": "^4.1.5",
       "babel-plugin-rewire": "^1.1.0",
-      "babel-plugin-transform-regenerator": "^6.26.0",
-      "babel-preset-es2015": "^6.24.1",
+      "babel-plugin-transform-runtime": "^6.23.0",
+      "babel-preset-env": "^1.6.1",
       "babel-preset-flow": "^6.23.0",
       "babel-preset-power-assert": "^1.0.0",
-      "babel-register": "^6.26.0",
-      "coveralls": "^2.13.1",
-      "cross-env": "^5.0.5",
-      "flow-bin": "^0.54.0",
+      "codecov": "^3.0.0",
+      "cross-env": "^5.1.1",
+      "flow-bin": "^0.59.0",
       "flow-copy-source": "^1.2.1",
-      "flow-typed": "^2.1.5",
+      "flow-typed": "^2.2.3",
       "husky": "^0.14.3",
-      "mocha": "^3.5.0",
-      "npm-run-all": "^4.1.1",
-      "nyc": "^11.1.0",
+      "mocha": "^4.0.1",
+      "npm-run-all": "^4.1.2",
+      "nyc": "^11.3.0",
       "power-assert": "^1.4.4",
-      "prettier": "^1.6.1",
+      "prettier": "^1.8.2",
       "rehype-minify-whitespace": "^2.0.3",
       "remark": "^8.0.0",
       "remark-rehype": "^2.0.1",
-      "rewire": "^2.5.2",
-      "unified": "^6.1.5"
+      "rewire": "^3.0.1",
+      "unified": "^6.1.6"
    },
    "dependencies": {
       "hast-util-select": "^1.0.1",

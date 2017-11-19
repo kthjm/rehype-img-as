@@ -13,7 +13,9 @@ const parseHTMLActual = `
 `
 const parseHTMLExpect = `
 <div>
-    <img src="${expectAsBlobURL}" alt="" id="div_replaced" style="width:100px;height:200px" />
+    <img src="${
+       expectAsBlobURL
+    }" alt="" id="div_replaced" style="width:100px;height:200px" />
     <p>
         <img src="${expectAsBlobURL}" alt="" class="img_svg a_svg" />
     </p>
@@ -35,7 +37,9 @@ const parseMarkdownActual = `
 const parseMarkdownExpect = `
 <h1>test</h1>
 <p>
-    <img src="${expectAsBlobURL}" alt="" id="div_replaced" style="width:100px;height:200px" />
+    <img src="${
+       expectAsBlobURL
+    }" alt="" id="div_replaced" style="width:100px;height:200px" />
     <img src="${expectAsBlobURL}" alt="" class="img_svg a_svg" />
 </p>
 `

@@ -34,7 +34,7 @@ describe(`index.js`, () => {
          })
 
          const plugin = modules.default()
-         assert.deepStrictEqual(plugin().constructor, Promise)
+         assert.deepEqual(plugin().constructor, Promise.resolve().constructor)
          modules.__set__({ _re2 })
       })
 
