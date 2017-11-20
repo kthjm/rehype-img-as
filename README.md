@@ -1,7 +1,10 @@
 # rehype-img-as
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
+[![npm](https://img.shields.io/npm/v/rehype-img-as.svg?style=flat-square)](https://www.npmjs.com/package/rehype-img-as)
+[![npm](https://img.shields.io/npm/dm/rehype-img-as.svg?style=flat-square)](https://www.npmjs.com/package/rehype-img-as)
 [![Build Status](https://img.shields.io/travis/kthjm/rehype-img-as.svg?style=flat-square)](https://travis-ci.org/kthjm/rehype-img-as)
 [![Coverage Status](https://img.shields.io/codecov/c/github/kthjm/rehype-img-as.svg?style=flat-square)](https://codecov.io/github/kthjm/rehype-img-as)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 use `alt` attribute as alternative store.
 
