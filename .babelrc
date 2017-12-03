@@ -1,0 +1,19 @@
+{
+   "env": {
+      "build": {
+         "presets": [
+            ["env", { "targets": { "browsers": ["last 2 versions", "safari >= 7"] } }],
+            "flow"
+         ],
+         "plugins": ["array-includes"]
+      },
+      "test": {
+         "presets": [
+            ["env", { "targets": { "node": "current" } }],
+            "flow",
+            "power-assert"
+         ],
+         "plugins": ["istanbul", "rewire"]
+      }
+   }
+}

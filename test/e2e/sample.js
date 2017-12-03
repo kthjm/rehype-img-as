@@ -28,33 +28,33 @@ const html = `
 
 const expectAsBlobURL = `blob:~`
 const replaceHastMap = {
-   'assets/foo.html': `<span>foo</span>`,
-   'assets/foo.svg': `<svg><path /></svg>`
+  'assets/foo.html': `<span>foo</span>`,
+  'assets/foo.svg': `<svg><path /></svg>`
 }
 
 describe(`sample in README.md`, () => {
-   it(`testing`, async () => {
-      const result = await mdToHastImgAs(markdown)
-      const expect = await htmlToHast(html)
-      result.data = { quirksMode: false }
-      assert.deepStrictEqual(result, expect)
-   })
+  it(`testing`, async () => {
+    const result = await mdToHastImgAs(markdown)
+    const expect = await htmlToHast(html)
+    result.data = { quirksMode: false }
+    assert.deepStrictEqual(result, expect)
+  })
 
-   let currentFetch, currentURL
-   before(() => {
-      currentFetch = global.fetch
-      currentURL = global.URL
+  let currentFetch, currentURL
+  before(() => {
+    currentFetch = global.fetch
+    currentURL = global.URL
 
-      global.fetch = async file => ({
-         ok: true,
-         blob: () => {},
-         text: () => replaceHastMap[file]
-      })
-      global.URL = () => {}
-      global.URL.createObjectURL = blob => expectAsBlobURL
-   })
-   after(() => {
-      global.fetch = currentFetch
-      global.URL = currentURL
-   })
+    global.fetch = async file => ({
+      ok: true,
+      blob: () => {},
+      text: () => replaceHastMap[file]
+    })
+    global.URL = () => {}
+    global.URL.createObjectURL = blob => expectAsBlobURL
+  })
+  after(() => {
+    global.fetch = currentFetch
+    global.URL = currentURL
+  })
 })

@@ -4,39 +4,39 @@ import rehype from 'rehype'
 import type { Rehype$Root } from './types.js'
 
 const fetchSkeleton = (file): Promise<Response> =>
-   fetch(file).then(res => {
-      if (!res.ok) {
-         throw new Error(`failed to fetch ${file}`)
-      }
-      return res
-   })
+  fetch(file).then(res => {
+    if (!res.ok) {
+      throw new Error(`failed to fetch ${file}`)
+    }
+    return res
+  })
 
 type FetchToWhat<O> = (file: string) => Promise<O>
 
 export const fetchToHast: FetchToWhat<Rehype$Root | void> = async file => {
-   try {
-      const text: string = await fetchSkeleton(file).then(res => res.text())
-      return htmlToHast(text)
-   } catch (err) {
-      console.warn(err.message)
-      return
-   }
+  try {
+    const text: string = await fetchSkeleton(file).then(res => res.text())
+    return htmlToHast(text)
+  } catch (err) {
+    console.warn(err.message)
+    return
+  }
 }
 
 export const fetchToBlobUrl: FetchToWhat<string> = async file => {
-   try {
-      const blob: Blob = await fetchSkeleton(file).then(res => res.blob())
-      return URL.createObjectURL(blob)
-   } catch (err) {
-      console.warn(err.message)
-      return file
-   }
+  try {
+    const blob: Blob = await fetchSkeleton(file).then(res => res.blob())
+    return URL.createObjectURL(blob)
+  } catch (err) {
+    console.warn(err.message)
+    return file
+  }
 }
 
 const htmlToHast = (() => {
-   const processor = rehype().data('settings', {
-      fragment: true,
-      position: false
-   })
-   return (html: string): Rehype$Root => processor.parse(html)
+  const processor = rehype().data('settings', {
+    fragment: true,
+    position: false
+  })
+  return (html: string): Rehype$Root => processor.parse(html)
 })()
